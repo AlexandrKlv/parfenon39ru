@@ -40,7 +40,7 @@
 			<div class="estate" style="background: white url(/themes/theme_1.0/img/<?php echo $bg_img; ?>) right bottom no-repeat;  padding-top:15px;">
 				<div class="estateImgContBig"> <!--style="width:64%;"-->
 					<?php if ($img!='_no_image') { ?>
-					<a class="fancybox" rel="gallery" href="/uploads/images/realty/<?php echo $img;?>" title=""><div class="estateImg"><img style="width:100%;" src="/uploads/images/realty/<?php echo $img; ?>" /></div></a>
+					<a class="fancybox" rel="gallery" href="/uploads/images/realty/<?php echo $img;?>" title=""><div class="estateImg"><img style="width:100%; max-height: 400px;" src="/uploads/images/realty/<?php echo $img; ?>" /></div></a>
 
 
 <div id="gallery-box">
@@ -126,12 +126,18 @@
 
 <div style="clear:both;"></div>
 
-					<div style="border-bottom:2px solid #efefef"></div>
-					<?php if ($item['description']) { ?><div class="estateType" style="font-size:14px; margin-top:10px; max-width:600px;"><b>Описание:</b></div>
-					<div class="estateType" style="max-width: 600px; font-size: 18px;">
-						<p><?php echo $item['description']; 
-						?></p>
+					<div class="row contaier">
+					<div class="col-12" style="border-bottom:2px solid #efefef">
+						<h3><b>Описание:</b></h3>
 					</div>
+					<?php if ($item['description']) { ?><div class="estateType" style="font-size:14px; margin-top:10px;"></div>
+					
+					<div class="estateType" style="font-size:24px; margin: 30px 30px 50px 30px;">
+						<?php echo $item['description']; 
+						?>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
 <div style="clear:both;"></div>
 
 				<div id="YMapsID" style="height:350px;"></div>

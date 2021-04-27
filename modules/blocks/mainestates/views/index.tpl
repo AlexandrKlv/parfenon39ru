@@ -5,7 +5,8 @@
 	<div class="catalog col-lg-8 col-md-12 col-12 row text-center" style="align-content: start;">
 
 		<?php if (!empty($res2)) { ?>
-		<h3>Самые выгодные варианты:</h3>
+
+		<h3><br><ins>Самые выгодные варианты:</ins></h3>
 			<?php	foreach($res2 as $ticket){ 
 					$img = (trim($ticket['photo1'])!=='') ? $ticket['photo1'] : '_no_image';
 					$bg_img = 'bg_com.png';
@@ -17,45 +18,38 @@
 
 		<div class="col-12 portfolio-item border-bottom">
             <div class="h-100 row">
-              <div class="col-12 col-md-6 col-lg-6 estate">
+            	<h4 class="col-12"><b><?php if ($ticket['num_rooms_id']) if ($ticket['type_name']=='Квартира'){  $ticket['type_name']=mb_strtolower($ticket['type_name'], "UTF-8");?>
+					<?php if ($ticket['num_rooms_id']==1) echo 'Однокомнатная'; elseif ($ticket['num_rooms_id']==2) echo 'Двухкомнатная';  elseif ($ticket['num_rooms_id']==3) echo 'Трехкомнатная'; elseif ($ticket['num_rooms_id']==4) echo 'Многокомнатная';  else $ticket['type_name'] = $ticket['numRooms_name']; ?>
+					<?php } ?><?php echo $ticket['type_name']; ?></b></h4>
+              <div class="col-6 estate" style="padding: 0px;">
               	<?php if ($img!='_no_image') { ?>
-				<a href="#"><img class="card-img-top" src="/uploads/images/realty/mini/<?php echo $img; ?>" alt=""></a>
+				<a><img class="card-img-top" style="width:100%; padding: 0px; max-height: 250px;" src="/uploads/images/realty/mini/<?php echo $img; ?>" alt=""></a>
 				<?php } else { ?>
 				<div class="estateImg"><img class="card-img-top" style="width: 100%;" src="/themes/theme_1.0/img/no_imgs.jpg" /></div></a><?php } ?>
               </div>
-              <div class="col-12 col-md-6 col-lg-6">
+              <div class="col-6">
                 <div class="card-body no-pd">
-                  <h5 class="card-title">
-                  	<br>
-                    <a href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>"><?php echo $ticket['street']; ?></a> 
-                  </h5>
                   <ul class="list-group list-group-flush">
             	  <li class="list-group-item">
-                  <p class="card-text"><?php if ($ticket['num_rooms_id']) if ($ticket['type_name']=='Квартира'){  $ticket['type_name']=mb_strtolower($ticket['type_name'], "UTF-8");?>
-					<?php if ($ticket['num_rooms_id']==1) echo 'Однокомнатная'; elseif ($ticket['num_rooms_id']==2) echo 'Двухкомнатная';  elseif ($ticket['num_rooms_id']==3) echo 'Трехкомнатная'; elseif ($ticket['num_rooms_id']==4) echo 'Многокомнатная';  else $ticket['type_name'] = $ticket['numRooms_name']; ?>
-					<?php } ?><?php echo $ticket['type_name']; ?>
-
-					 <?php echo $ticket['square']; ?> м<sup>2</sup></p></li>
-
-					 <li class="list-group-item"><?php if (in_array($ticket['type_id'], array(1,3,5))) { ?><div class="estateFloor h6"><b>Этаж</b>: <?php if ($ticket['floor']==0) {?>цокольный<?php } else { echo $ticket['floor']; ?>/<?php echo $ticket['floor_num']; } ?></div><?php } ?>
+					 <div>
+          
+          
+          <h5><br><?php echo $ticket['price']; ?> руб.</h5>
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><b>Площадь:</b> <?php echo $ticket['square']; ?> м<sup>2</sup></li>
+            <li class="list-group-item"><?php echo ($cities[$ticket['city_id']]['name']); ?>, <b><?php echo $ticket['street']; ?></b></li>
+            <li class="list-group-item"><b><?php if (in_array($ticket['type_id'], array(1,3,5))) { ?><div class="estateFloor h6">Этаж: <?php if ($ticket['floor']==0) {?><?php } else { echo $ticket['floor']; ?>/<?php echo $ticket['floor_num']; } ?></div><?php } ?>
 					<?php  if (($ticket['num_rooms_id']) and ($ticket['type_id']<4)){ ?>
 						<?php if ($ticket['num_rooms_id'] < 6) { ?></li>
-						<li class="list-group-item">
-							<div class="estateNum h6"><b>Количество <?php if ($ticket['type_id'] != 5){ ?>комнат<?php } else { ?>офисов<?php } ?></b>: <?php echo $ticket['num_rooms_id']; ?></div>
-						<?php } else if ($ticket['num_rooms_id']>5) { ?>
-							<!--div class="estateNum"><?php echo $ticket['numRooms_name']; ?></div-->
-						<?php } ?>
-					<?php } ?></li>
+            
+            <?php } ?>
+					<?php } ?></b></b>
+          </ul>		
 
-
-
-					 <li class="list-group-item"><b><?php echo $ticket['price']; ?> руб.</b></li>
-
-					 <li class="list-group-item"><?php echo ($cities[$ticket['city_id']]['name']); ?>,</li>
-					 <li class="list-group-item"><?php echo $ticket['districts_name']; ?> район
-					 <li class="list-group-item">Дата: <?php echo date("j.m.Y", $ticket['date_add']); ?></p>
+				</div>
 					
-					<a href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>" style="margin: 5px; text-decoration: none;" type="button" class="btn btn-success btn-block">Смотреть</a></li></ul>
+					<a class="btn btn-success btn-block" href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>" style="margin: 5px; text-decoration: none!important;">Смотреть</a></li></ul>
+
                 </div>
               </div>
             </div>
@@ -71,7 +65,7 @@
 		<?php } ?> 
 		
 		<?php if (!empty($res1)) { ?>
-		<h3>Последние 10 объявлений:</h3>
+		<h3><br><ins>Последние 10 объявлений:</ins><br><br></h3>
 			<?php	foreach($res1 as $ticket){ 
 					$img = (trim($ticket['photo1'])!=='') ? $ticket['photo1'] : '_no_image';
 					$bg_img = 'bg_com.png';
@@ -81,46 +75,39 @@
 					elseif ($ticket['type_id']==4) $bg_img = 'bg_gar.png';
 			?>
 
-		<div class="col-12 portfolio-item border-bottom">
+			<div class="col-12 portfolio-item border-bottom">
             <div class="h-100 row">
-              <div class="col-12 col-md-6 col-lg-6 estate">
+            	<h4 class="col-12"><b><?php if ($ticket['num_rooms_id']) if ($ticket['type_name']=='Квартира'){  $ticket['type_name']=mb_strtolower($ticket['type_name'], "UTF-8");?>
+					<?php if ($ticket['num_rooms_id']==1) echo 'Однокомнатная'; elseif ($ticket['num_rooms_id']==2) echo 'Двухкомнатная';  elseif ($ticket['num_rooms_id']==3) echo 'Трехкомнатная'; elseif ($ticket['num_rooms_id']==4) echo 'Многокомнатная';  else $ticket['type_name'] = $ticket['numRooms_name']; ?>
+					<?php } ?><?php echo $ticket['type_name']; ?></b></h4>
+              <div class="col-6 estate" style="padding: 0px;">
               	<?php if ($img!='_no_image') { ?>
-				<a href="#"><img class="card-img-top" src="/uploads/images/realty/mini/<?php echo $img; ?>" alt=""></a>
+				<a><img class="card-img-top" style="width:100%; padding: 0px; max-height: 250px;" src="/uploads/images/realty/mini/<?php echo $img; ?>" alt=""></a>
 				<?php } else { ?>
 				<div class="estateImg"><img class="card-img-top" style="width: 100%;" src="/themes/theme_1.0/img/no_imgs.jpg" /></div></a><?php } ?>
               </div>
-              <div class="col-12 col-md-6 col-lg-6">
+              <div class="col-6">
                 <div class="card-body no-pd">
-                  <h5 class="card-title">
-                  	<a href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>"><?php echo $ticket['street']; ?></a> 
-                  	<br>
-                    <ul class="list-group list-group-flush">
+                  <ul class="list-group list-group-flush">
             	  <li class="list-group-item">
-                  <p class="card-text"><?php if ($ticket['num_rooms_id']) if ($ticket['type_name']=='Квартира'){  $ticket['type_name']=mb_strtolower($ticket['type_name'], "UTF-8");?>
-					<?php if ($ticket['num_rooms_id']==1) echo 'Однокомнатная'; elseif ($ticket['num_rooms_id']==2) echo 'Двухкомнатная';  elseif ($ticket['num_rooms_id']==3) echo 'Трехкомнатная'; elseif ($ticket['num_rooms_id']==4) echo 'Многокомнатная';  else $ticket['type_name'] = $ticket['numRooms_name']; ?>
-					<?php } ?><?php echo $ticket['type_name']; ?>
-
-					 <?php echo $ticket['square']; ?> м<sup>2</sup></p></li>
-
-					 <li class="list-group-item"><?php if (in_array($ticket['type_id'], array(1,3,5))) { ?><div class="estateFloor h6"><b>Этаж</b>: <?php if ($ticket['floor']==0) {?>цокольный<?php } else { echo $ticket['floor']; ?>/<?php echo $ticket['floor_num']; } ?></div><?php } ?>
+					 <div>
+          
+          
+          <h5><br><?php echo $ticket['price']; ?> руб.</h5>
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><b>Площадь:</b> <?php echo $ticket['square']; ?> м<sup>2</sup></li>
+            <li class="list-group-item"><?php echo ($cities[$ticket['city_id']]['name']); ?>, <b><?php echo $ticket['street']; ?></b></li>
+            <li class="list-group-item"><b><?php if (in_array($ticket['type_id'], array(1,3,5))) { ?><div class="estateFloor h6">Этаж: <?php if ($ticket['floor']==0) {?><?php } else { echo $ticket['floor']; ?>/<?php echo $ticket['floor_num']; } ?></div><?php } ?>
 					<?php  if (($ticket['num_rooms_id']) and ($ticket['type_id']<4)){ ?>
 						<?php if ($ticket['num_rooms_id'] < 6) { ?></li>
-						<li class="list-group-item">
-							<div class="estateNum h6"><b>Количество <?php if ($ticket['type_id'] != 5){ ?>комнат<?php } else { ?>офисов<?php } ?></b>: <?php echo $ticket['num_rooms_id']; ?></div>
-						<?php } else if ($ticket['num_rooms_id']>5) { ?>
-							<!--div class="estateNum"><?php echo $ticket['numRooms_name']; ?></div-->
-						<?php } ?>
-					<?php } ?></li>
+            
+            <?php } ?>
+					<?php } ?></b></b>
+          </ul>		
 
-
-
-					 <li class="list-group-item"><b><?php echo $ticket['price']; ?> руб.</b></li>
-
-					 <li class="list-group-item"><?php echo ($cities[$ticket['city_id']]['name']); ?>,</li>
-					 <li class="list-group-item"><?php echo $ticket['districts_name']; ?> район
-					 <li class="list-group-item">Дата: <?php echo date("j.m.Y", $ticket['date_add']); ?></p>
+				</div>
 					
-					<a href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>" style="margin: 5px; text-decoration: none;" type="button" class="btn btn-success btn-block">Смотреть</a></li></ul>	
+					<a href="<?php echo SITE_URL . '/realty/cities/districts/all/' . 'all-' . $ticket['id'];?>" style="margin: 5px; text-decoration: none;" class="btn btn-success btn-block">Смотреть</a></li></ul>
                 </div>
               </div>
             </div>
@@ -136,7 +123,7 @@
 		<?php } ?> 
 
 
-		<a href="<?php echo SITE_URL . '/realty/cities/districts/all/page=2'; ?>" style="margin-top: 20px; text-decoration: none;" type="button" class="btn btn-success btn-lg btn-block">Смотреть все объявления</a>
+		<a href="<?php echo SITE_URL . '/realty/cities/districts/all/page=2'; ?>" style="margin-top: 20px; text-decoration: none;" class="btn btn-success btn-lg btn-block">Смотреть все объявления</a>
 	
 	
 	</div>
@@ -186,7 +173,7 @@
 			
 		<div class="pdcard">
             <div class="card h-100">
-              <h4 class="card-header"><?php echo $new['name'];?></h4>
+              <h5 class="card-header"><?php echo $new['name'];?></h5>
               <div class="card-body"><?php if (FALSE) if ($new['image']) { ?><img src="<?php echo SITE_URL; ?>/uploads/modules/news/<?php echo $new['image'];?>" style="float:left; width:120px; max-height:250px; border:margin-right:4px; margin-bottom:4px;" /><?php } ?>
 
 

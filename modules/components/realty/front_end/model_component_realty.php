@@ -203,7 +203,7 @@ class model_component_realty extends model {
 				
 				
 			$numpage = isset($params['page'])  ? (int)$params['page'] : 1;
-			$start = ($numpage-1) * 10;
+			$start = ($numpage-1) * 20;
 			if ($start<0) $start=0;
 			$result_count = $this->dbh->query_count($sql);
 			
@@ -214,7 +214,7 @@ class model_component_realty extends model {
 			}
 			$sql.=$orderby;
 			
-			$sql.=" LIMIT " . $start . ", 10";
+			$sql.=" LIMIT " . $start . ", 20";
 			
 			
 			//echo $sql;

@@ -21,7 +21,7 @@
 
 
     <div class="container">
- <div class="row main-form">
+ <div class="row main-form" style="margin-top: 20px; border-radius: 10px; margin-bottom: 20px;>
     <form method="POST" action="" class="h-100 w-100">
 
 <div class="form-group">
@@ -88,8 +88,8 @@
       </div>
       <?php } ?>
       
-      <div style="text-align: center; width: 100%; height: 30px;" class="form-group">
-        <input class="primary" type="submit" name="users_register" value="Зарегистрироваться" >
+      <div style="text-align: center; width: 100%; " class="form-group">
+        <input class="btn btn-primary" type="submit" name="users_register" value="Зарегистрироваться" >
       </div>
     </form>
   </div>

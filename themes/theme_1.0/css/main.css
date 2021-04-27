@@ -1,5 +1,7 @@
+	
 	.main-menu li {
 		display: inline-block;
+		font-size: 20px;
 	}
 	.main-menu li a{
 		color: white;
@@ -115,4 +117,8 @@ span.input-group-addon i {
     text-align: center;
     margin-bottom: 0rem;
     color: white;
+}
+
+#page_name {
+	
 }

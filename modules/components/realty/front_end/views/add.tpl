@@ -1,5 +1,5 @@
 <!-- Подача объявления ПРОВЕРЕННАЯ -->
-<div id="content" class="container alls row main-form" style="background:#33824E;">
+<div id="content" class="container alls row main-form" style="background:#33824E; margin-top: 20px; border-radius: 10px; margin-bottom: 20px;">
 	<div class="sss">
 		<h1>Подать объявление</h1>
 		<?php if (isset($_SESSION['estate_ok'])) { ?>

@@ -12,21 +12,47 @@ $(document).ready(function($){
 					});
 });
 </script>
+<!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(57453487, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57453487" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
 
 
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <div class="" style="min-height: 300px; background-image: url(/themes/theme_1.0/img/1.jpg); background-position: center;">
+         <div class="asd" style="
+         min-height: 300px; 
+         background-image: url(/themes/theme_1.0/img/1.jpg); 
+         background-position: center;
+        
+         ">
+         <style>
+          @media (max-width: 576px) {
+          .asd{
+         height:400px; 
+         }
+         }
+         </style>
 		
 			
 			
 			<a href="/"  style="color:black !important;">
 			<div class="container">
-					<div class="logotext" style="color:white; padding-top: 50px;"><b>Город Калининград<br> 
-						Агентство недвижимости и оценки.<br>
-						Тел.: 8 911 865 14 76<br>
-						E-mail: contact@parfenon39.ru<br><br></b>
+					<div class="logotext" style="color:white; padding-top: 40px;"><b><ha style="font-size: 28px;">"ПАРФЕНОН"</ha><br> 
+						Агентство недвижимости и оценки.<br><h>
+						<h4>Тел.: 8 911 865 14 76<br>
+						E-mail: contact@parfenon39.ru</h4><br></b>
 					</div>
 					[position=us]
 			</div>
@@ -41,6 +67,7 @@ $(document).ready(function($){
 			</div>
 			<div class="clear"></div>
 			</div>
+			<meta name="yandex-verification" content="53b01bacb5290439" />
 	</header>
 
 	

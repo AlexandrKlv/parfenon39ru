@@ -39,7 +39,7 @@
 		<div class="estate" style="background: white url(/themes/theme_1.0/img/<?php echo $bg_img; ?>) right bottom no-repeat;  padding-top:15px;">
 			<div class="estateImgContBig"> <!--style="width:64%;"-->
 				<?php if ($img!='_no_image') { ?>
-				<a class="fancybox" rel="gallery" href="/uploads/images/realty/<?php echo $img;?>" title=""><div class="estateImg"><img style="width:100%" src="/uploads/images/realty/<?php echo $img; ?>" /></div></a>
+				<a class="fancybox" rel="gallery" href="/uploads/images/realty/<?php echo $img;?>" title=""><div class="estateImg"><img style="width:100%; max-height: 400px;" src="/uploads/images/realty/<?php echo $img; ?>" /></div></a>
 
 
 				<div id="gallery-box">
@@ -91,8 +91,8 @@
 				<li class="list-group-item"><b>Район:</b> <?php echo isset($districty) ? $districty : 'не указан'; ?></li>
 				<li class="list-group-item"><b>Улица:</b> <?php if ($item['street']) { ?><?php echo $item['street']; ?><?php } ?>
 					<?php if (isset($real)) { ?></li>
-					<li class="list-group-item"><b>Дом:</b><?php if ($item['dm']) { ?><?php echo $item['dm']; ?></div><?php } ?></li>
-					<li class="list-group-item"><b>Квартира:</b> <?php if ($item['kv']) { ?><?php echo $item['kv']; ?></div><?php } ?>
+					<li class="list-group-item"><b>Дом:</b><?php if ($item['dm']) { ?><?php echo $item['dm']; ?><?php } ?></li>
+					<li class="list-group-item"><b>Квартира:</b> <?php if ($item['kv']) { ?><?php echo $item['kv']; ?><?php } ?>
 						<?php } ?></li>
 						<li class="list-group-item"><b>Этаж:</b> <?php if (in_array($item['type_id'], array(1,3,5))) { ?><?php if ($item['floor']!=0) {?><?php if ($item['floor']==0) {?>цокольный<?php } else { echo $item['floor']; ?>/<?php echo $item['floor_num']; } ?><?php } ?><?php } ?></li>
 						<li class="list-group-item"><b>Дата:</b>  <?php echo date("j.m.Y", $item['date_add']); ?></li>
@@ -127,14 +127,18 @@
 
 
 					<div style="clear:both;"></div>
-
-					<div style="border-bottom:2px solid #efefef"></div>
-					<?php if ($item['description']) { ?><div class="estateType" style="font-size:14px; margin-top:10px; max-width:600px;"><b>Описание:</b></div>
-					<div class="estateType" style=" max-width:600px; font-size:14px; line-height:18px;">
+				<div class="row contaier">
+					<div class="col-12" style="border-bottom:2px solid #efefef">
+						<h3><b>Описание:</b></h3>
+					</div>
+					<?php if ($item['description']) { ?><div class="estateType" style="font-size:14px; margin-top:10px;"></div>
+					
+					<div class="estateType" style="font-size:24px; margin: 30px 30px 50px 30px;">
 						<?php echo $item['description']; 
 						?>
 					</div>
 					<div style="clear:both;"></div>
+				</div>
 
 
 
@@ -156,7 +160,7 @@
 							var typecontrol = new YMaps.TypeControl();
 
 							map.enableScrollZoom();
-							map.removeOverlay(geoResult);
+							//map.removeOverlay(geoResult);
 							var geocoder = new YMaps.Geocoder('Россия, Калининградская область, Калининград, <?php echo $item['street'];?> <?php if (isset($item['dm'])) if ((int)$item['dm']) echo $item['dm']; ?>', {results: 1, boundedBy: map.getBounds()});
 
 							YMaps.Events.observe(geocoder, geocoder.Events.Load, function () {
