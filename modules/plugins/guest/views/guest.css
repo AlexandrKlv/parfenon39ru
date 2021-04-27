@@ -1,0 +1,104 @@
+.guest-comments input, textarea {  
+	width:300px;
+	border-color: #9b9b9b #bababa #bababa;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Tahoma;
+    height: 22px;
+    margin-bottom: 4px;
+    padding: 3px 5px;}
+	
+.guest-comments textarea {
+	min-height:100px;
+}
+.guest-comments {
+    overflow: hidden;
+    padding-top: 13px;
+    width: 100%;
+}
+#guestTable {width: 100%;}
+#imgCapth {height: 18px; float: left;padding: 0px;}
+#textCapth {float: left; width: 200px;margin-left: 24px;}
+#submit {
+	cursor: pointer;
+    float: right;
+    height: auto;
+    margin-top: 10px;
+    padding: 3px 15px;
+    width: auto;
+	color:white;
+	background: #019fd7;
+    border: 1px solid #008cc0;
+}
+input:hover#submit {background-color:#008cc0;}
+.guest-comments form#showTextForm {border: none; margin: 0px;}
+.guest-comments form  {margin:3px 20px 20px;padding:10px; border:1px solid #008cc0; border-radius:10px; -moz-border-radius:10px; }
+tr.hiddenTR {display: none;} 
+td.dataMessage {border-bottom: 1px dotted grey; padding:10px 5px 3px 5px; text-indent:0;}
+.questionBtn:hover {background-color: #008cc0; cursor: pointer;}
+.questionBtn {
+	background: none repeat scroll 0 0 #019fd7;
+    border: 1px solid #008cc0;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 3px 14px;
+	border-radius: 4px;
+}
+input.showTextarea {
+	background: none repeat scroll 0 0 #019fd7;
+    border: 1px solid #008cc0;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 3px 14px;
+	width: 180px; 
+	vertical-align: inherit;
+	height: auto;
+}
+.buttons-comments-edit {
+    margin: 7px 0;
+}
+.head1 {
+    margin-bottom: 14px;
+}
+input.showTextarea:hover {background-color: #008cc0; cursor: pointer;}
+div.showAnswer {display: none;}
+div.showAnswerExp {}
+textarea.textareaForAnswer {border:1px solid #ada9a5; width: 250px; height: 50px; margin-top: 5px;}
+
+div.divInfo { -moz-border-radius:10px; border-radius:10px; border: 1px solid #019fd7; padding: 10px; margin-left: 20px; margin-right: 20px; color: #00529B; background-color: white; text-align: center;}
+div.divError { -moz-border-radius:10px; border-radius:10px; border: 1px solid orange; padding: 10px; margin-left: 20px; margin-right: 20px; color: #9F6000; background-color: #FEEFB3; text-align: center;}
+div.divSuccess { -moz-border-radius:10px; border-radius:10px; border: 1px solid green; padding: 10px; margin-left: 20px; margin-right: 20px; color: #4F8A10; background-color: #DFF2BF; text-align: center;}
+div.divAnswer {
+	background-color: #f3f3f3;
+    border: 1px dashed #e4e0dc;
+    margin: 5px;
+    padding: 5px;
+	 border-radius: 5px;
+}
+
+button.deleteAnswer:hover {background-color: #008cc0; cursor: pointer;}
+button.deleteAnswer {
+	background: none repeat scroll 0 0 #019fd7;
+    border: 1px solid #008cc0;
+    border-radius: 4px;
+    color: white;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 3px 14px;
+    vertical-align: inherit;
+    width: auto;
+}
+table#tableGuest {border: 0px solid black;}
+
+.selectedTd {
+	border: 1px dashed red;
+	border-color: red;
+}
+.guest-comments h3 {
+    padding: 0 12px;
+}

@@ -1,0 +1,47 @@
+div.divAllNotes {
+	text-indent: 2px;
+
+}
+div.divBlockAllNotes { 
+	background: #97c8fb;
+	border-radius: 0px;
+	border: 3px double white;
+	position: relative;
+	padding: 4px 0px 5px 5px;
+	margin: 5px 3px;
+	font-size: 11px; 
+	color: #26326D;
+	font-family: Calibri;
+	font-style: italic;
+}
+div.divBlockAllNotes:hover {
+	background-color: #AFDAFD;
+}
+a.aAllNotes {
+	text-decoration: none;
+}
+/*a.aAllNotes div.divBlockAllNotes:first-of-type { 
+	-webkit-border-top-left-radius: 12px;
+	-webkit-border-top-right-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	-moz-border-radius-topright: 12px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+/*.leftBar div.divAllNotes {font-size: 12px; margin: 0px; text-align: justify;}*/
+
+
+
+
+/*.leftBar td.tdAllNotes {border: 1px solid black;}
+tr.trAllNotes {border: 1px solid black;margin: 3px;}
+td.tdAllNotes:nth-child(1) {
+	-webkit-border-top-left-radius: 9px;
+	-webkit-border-top-right-radius: 9px;
+	-moz-border-radius-topleft: 9px;
+	-moz-border-radius-topright: 9px;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+}
+tr.trAllNotes:nth-child(odd) {background-color: #e0f2f7;}
+tr.trAllNotes:nth-child(even) {background-color: #e0e6f8;}*/

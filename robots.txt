@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /modules/
+Disallow: /user_cms/
+
+#Host: http://www.parfenon39.ru
+#Sitemap: /sitemap.xml

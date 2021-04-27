@@ -1,0 +1,160 @@
+.feedback {
+margin: auto;
+}
+.feedback label {
+    display: block;
+	font-family: Tahoma;
+    margin-bottom: 7px;
+}
+
+.feedback div{
+    margin-bottom:3px;
+}
+.feedback .checkbox-label {
+    float: left;
+    margin-right: 10px;
+}
+.feedback span.error {
+    color: #CC0000;
+    display: block;
+    font-size: 80%;
+    line-height: 120%;
+}
+.feedback input[type="submit"] {
+    background: #fff;
+    border: solid 1px #fff;
+    box-shadow: 0px 0px 3px #000;
+    color: #000;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+
+}
+.feedback input[type="submit"]:hover {
+	background-color: #000;
+	color: #fff;
+}
+.feedback input[type="submit"]:focus {
+    box-shadow: 0 3px 8px #B7C6D6 inset, 0 0 3px #DDDDDD inset, 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.feedback input[type="text"], .feedback textarea, .feedback select {
+    .feedback label {
+    display: block;
+	font-family: Tahoma;
+    margin-bottom: 7px;
+}
+
+.feedback div{
+    margin-bottom:3px;
+}
+.feedback .checkbox-label {
+    float: left;
+    margin-right: 10px;
+}
+.feedback span.error {
+    color: #CC0000;
+    display: block;
+    font-size: 80%;
+    line-height: 120%;
+}
+.feedback input[type="submit"] {
+    background: #019fd7;
+    border: 0 none;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    font-family: Verdana;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 8px 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+
+}
+.feedback input[type="submit"]:focus {
+    box-shadow: 0 3px 8px #B7C6D6 inset, 0 0 3px #DDDDDD inset, 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.feedback input[type="text"], .feedback textarea, .feedback select {
+    border-color: #9b9b9b #bababa #bababa;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    height: 22px;
+    margin-bottom: 4px;
+    padding: 3px 5px;
+	font-family: Tahoma;
+}
+.feedback textarea {
+    resize:vertical;
+    min-height: 150px;
+	.feedback label {
+    display: block;
+	font-family: Tahoma;
+    margin-bottom: 7px;
+}
+
+.feedback div{
+    margin-bottom:3px;
+}
+.feedback .checkbox-label {
+    float: left;
+    margin-right: 10px;
+}
+.feedback span.error {
+    color: #CC0000;
+    display: block;
+    font-size: 80%;
+    line-height: 120%;
+}
+.feedback input[type="submit"] {
+    border: solid 1px #fff;
+     box-shadow: 0px 0px 3px #000;
+    color: white;
+    cursor: pointer;
+    font-family: Verdana;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 8px 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+
+}
+.feedback input[type="submit"]:focus {
+    box-shadow: 0 3px 8px #B7C6D6 inset, 0 0 3px #DDDDDD inset, 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.feedback input[type="text"], .feedback textarea, .feedback select {
+    border: solid 1px #fff;
+    box-shadow: 0 0 0 0;
+    height: 22px;
+    margin-bottom: 4px;
+    padding: 3px 5px;
+	background-color: #fff;
+}
+.feedback textarea {
+    resize:vertical;
+    min-height: 100px;
+}
+
+.feedback {
+width:300px;
+}
+}
+
+.feedback {
+width:300px;
+}
+    height: 22px;
+    margin-bottom: 4px;
+    padding: 3px 5px;
+	font-family: Tahoma;
+}
+.feedback textarea {
+    resize:vertical;
+    min-height: 150px;
+}
+
+.feedback {
+width:300px;
+}

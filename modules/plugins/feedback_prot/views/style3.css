@@ -1,0 +1,49 @@
+.feedback label {
+    display: block;
+}
+.feedback .checkbox-label {
+    float: left;
+    margin-right: 10px;
+}
+.feedback span.error {
+    color: #CC0000;
+    display: block;
+    font-size: 80%;
+    line-height: 120%;
+}
+.feedback input[type="submit"] {
+ 
+	background-color: #000;
+    cursor: pointer;
+    padding: 3px 10px;
+    text-shadow: 0 1px #dddddd;
+    -webkit-box-shadow: -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+.feedback input[type="submit"]:focus {
+    box-shadow: 0 3px 8px #B7C6D6 inset, 0 0 3px #DDDDDD inset, 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.feedback input[type="text"], .feedback textarea, .feedback select {
+    border-color: #999999 #CCCCCC #CCCCCC #999999;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    /*box-shadow: 1px 1px 1px #CCCCCC inset;*/
+    padding: 3px 5px;
+    -webkit-box-shadow: -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+.feedback textarea {
+     -webkit-box-shadow: -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
+.feedback .gcapt {
+    -webkit-box-shadow: -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    border: 5px solid red;
+}

@@ -1,0 +1,1 @@
+<a class="nd" href="/<?php echo $compUrl;?>/basket"><div class="basketcat">Корзина</div></a>
