@@ -4,4 +4,4 @@
 CMS UserCMS
 
 ## Ссылка на сайт
-[parfenon39.ru](https://parfenon39.ru)
+[parfenon39.ru](http://parfenon39.ru)
